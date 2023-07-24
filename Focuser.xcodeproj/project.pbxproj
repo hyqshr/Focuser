@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		63E4AE8F2A6CCFDC005B9B40 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE8E2A6CCFDC005B9B40 /* Task.swift */; };
 		63E4AE922A6DA0BA005B9B40 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */; };
-		63E4AE962A6EBAD2005B9B40 /* TheIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E4AE952A6EBAD2005B9B40 /* TheIcon.png */; };
-		63E4AE982A6EBB30005B9B40 /* TheIcon 16x16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */; };
 		BB391C0327DB282A00FAA98F /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */; };
 		BB60C27127DAC4C8001620D1 /* Dad_JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */; };
 		BB60C27327DAC4C8001620D1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27227DAC4C8001620D1 /* MainView.swift */; };
@@ -21,11 +19,9 @@
 /* Begin PBXFileReference section */
 		63E4AE8E2A6CCFDC005B9B40 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		63E4AE952A6EBAD2005B9B40 /* TheIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TheIcon.png; path = "Dad Jokes/TheIcon.png"; sourceTree = "<group>"; };
-		63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "TheIcon 16x16.jpg"; path = "Dad Jokes/TheIcon 16x16.jpg"; sourceTree = "<group>"; };
 		BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
-		BB391C0427DBBCE300FAA98F /* Dad-Jokes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Dad-Jokes-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BB60C26D27DAC4C8001620D1 /* Dad Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dad Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB391C0427DBBCE300FAA98F /* Focuser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Focuser-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BB60C26D27DAC4C8001620D1 /* Focuser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focuser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dad_JokesApp.swift; sourceTree = "<group>"; };
 		BB60C27227DAC4C8001620D1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BB60C27427DAC4C8001620D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,9 +43,7 @@
 		BB60C26427DAC4C8001620D1 = {
 			isa = PBXGroup;
 			children = (
-				63E4AE952A6EBAD2005B9B40 /* TheIcon.png */,
-				63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */,
-				BB60C26F27DAC4C8001620D1 /* Dad Jokes */,
+				BB60C26F27DAC4C8001620D1 /* Focuser */,
 				BB60C26E27DAC4C8001620D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,15 +51,15 @@
 		BB60C26E27DAC4C8001620D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB60C26D27DAC4C8001620D1 /* Dad Jokes.app */,
+				BB60C26D27DAC4C8001620D1 /* Focuser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB60C26F27DAC4C8001620D1 /* Dad Jokes */ = {
+		BB60C26F27DAC4C8001620D1 /* Focuser */ = {
 			isa = PBXGroup;
 			children = (
-				BB391C0427DBBCE300FAA98F /* Dad-Jokes-Info.plist */,
+				BB391C0427DBBCE300FAA98F /* Focuser-Info.plist */,
 				63E4AE8E2A6CCFDC005B9B40 /* Task.swift */,
 				63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */,
 				BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */,
@@ -75,7 +69,7 @@
 				BB60C27927DAC4C8001620D1 /* Dad_Jokes.entitlements */,
 				BB60C27627DAC4C8001620D1 /* Preview Content */,
 			);
-			path = "Dad Jokes";
+			path = Focuser;
 			sourceTree = "<group>";
 		};
 		BB60C27627DAC4C8001620D1 /* Preview Content */ = {
@@ -89,9 +83,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB60C26C27DAC4C8001620D1 /* Dad Jokes */ = {
+		BB60C26C27DAC4C8001620D1 /* Focuser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB60C27C27DAC4C8001620D1 /* Build configuration list for PBXNativeTarget "Dad Jokes" */;
+			buildConfigurationList = BB60C27C27DAC4C8001620D1 /* Build configuration list for PBXNativeTarget "Focuser" */;
 			buildPhases = (
 				BB60C26927DAC4C8001620D1 /* Sources */,
 				BB60C26A27DAC4C8001620D1 /* Frameworks */,
@@ -101,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = "Dad Jokes";
+			name = Focuser;
 			productName = "Dad Jokes";
-			productReference = BB60C26D27DAC4C8001620D1 /* Dad Jokes.app */;
+			productReference = BB60C26D27DAC4C8001620D1 /* Focuser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB60C26C27DAC4C8001620D1 /* Dad Jokes */,
+				BB60C26C27DAC4C8001620D1 /* Focuser */,
 			);
 		};
 /* End PBXProject section */
@@ -144,10 +138,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63E4AE982A6EBB30005B9B40 /* TheIcon 16x16.jpg in Resources */,
 				BB60C27827DAC4C8001620D1 /* Preview Assets.xcassets in Resources */,
 				BB60C27527DAC4C8001620D1 /* Assets.xcassets in Resources */,
-				63E4AE962A6EBAD2005B9B40 /* TheIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,24 +281,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Dad Jokes/Dad_Jokes.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Dad Jokes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Focuser/Preview Content\"";
 				DEVELOPMENT_TEAM = 2TSW8M2BB3;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 2TSW8M2BB3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dad-Jokes-Info.plist";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Focuser-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.createchsol.Dad-Jokes";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = io.focuser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -317,24 +311,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Dad Jokes/Dad_Jokes.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Dad Jokes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Focuser/Preview Content\"";
 				DEVELOPMENT_TEAM = 2TSW8M2BB3;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 2TSW8M2BB3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dad-Jokes-Info.plist";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Focuser-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.createchsol.Dad-Jokes";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = io.focuser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -350,16 +346,16 @@
 				BB60C27B27DAC4C8001620D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		BB60C27C27DAC4C8001620D1 /* Build configuration list for PBXNativeTarget "Dad Jokes" */ = {
+		BB60C27C27DAC4C8001620D1 /* Build configuration list for PBXNativeTarget "Focuser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB60C27D27DAC4C8001620D1 /* Debug */,
 				BB60C27E27DAC4C8001620D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
