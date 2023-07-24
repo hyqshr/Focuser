@@ -104,10 +104,9 @@ struct MainView: View {
                 Button("Start") {
                     timerRunning = true
                 }
-                
-                Button("Reset") {
-                    countdownTimer = 5
-                }.foregroundColor(.red)
+                Button("Stop") {
+                    timerRunning = false
+                }
             }
             
         }

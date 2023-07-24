@@ -12,19 +12,6 @@ class ApplicationMenu: NSObject {
     let menu = NSMenu()
     
     func createMenu() -> NSMenu {
-//        let topView = NSHostingController(rootView: MainView().frame(width: 1000,height: 500))
-//        topView.view.frame.size = CGSize(width: 1000, height: 510)
-//
-//        let customMenuItem = NSMenuItem()
-//        customMenuItem.view = topView.view
-//        menu.addItem(customMenuItem)
-//        menu.addItem(NSMenuItem.separator())
-        
-        
-        
-        
-        
-        
         let aboutMenuItem = NSMenuItem(title: "About Dad Jokes",
                                        action: #selector(about),
                                        keyEquivalent: "")

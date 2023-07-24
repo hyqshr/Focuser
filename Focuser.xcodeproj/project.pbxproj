@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		63E4AE8F2A6CCFDC005B9B40 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE8E2A6CCFDC005B9B40 /* Task.swift */; };
 		63E4AE922A6DA0BA005B9B40 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */; };
+		63E4AE962A6EBAD2005B9B40 /* TheIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E4AE952A6EBAD2005B9B40 /* TheIcon.png */; };
+		63E4AE982A6EBB30005B9B40 /* TheIcon 16x16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */; };
 		BB391C0327DB282A00FAA98F /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */; };
 		BB60C27127DAC4C8001620D1 /* Dad_JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */; };
 		BB60C27327DAC4C8001620D1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27227DAC4C8001620D1 /* MainView.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		63E4AE8E2A6CCFDC005B9B40 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		63E4AE952A6EBAD2005B9B40 /* TheIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TheIcon.png; path = "Dad Jokes/TheIcon.png"; sourceTree = "<group>"; };
+		63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "TheIcon 16x16.jpg"; path = "Dad Jokes/TheIcon 16x16.jpg"; sourceTree = "<group>"; };
 		BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		BB391C0427DBBCE300FAA98F /* Dad-Jokes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Dad-Jokes-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BB60C26D27DAC4C8001620D1 /* Dad Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dad Jokes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +47,8 @@
 		BB60C26427DAC4C8001620D1 = {
 			isa = PBXGroup;
 			children = (
+				63E4AE952A6EBAD2005B9B40 /* TheIcon.png */,
+				63E4AE972A6EBB30005B9B40 /* TheIcon 16x16.jpg */,
 				BB60C26F27DAC4C8001620D1 /* Dad Jokes */,
 				BB60C26E27DAC4C8001620D1 /* Products */,
 			);
@@ -115,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB60C26827DAC4C8001620D1 /* Build configuration list for PBXProject "Dad Jokes" */;
+			buildConfigurationList = BB60C26827DAC4C8001620D1 /* Build configuration list for PBXProject "Focuser" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,8 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E4AE982A6EBB30005B9B40 /* TheIcon 16x16.jpg in Resources */,
 				BB60C27827DAC4C8001620D1 /* Preview Assets.xcassets in Resources */,
 				BB60C27527DAC4C8001620D1 /* Assets.xcassets in Resources */,
+				63E4AE962A6EBAD2005B9B40 /* TheIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB60C26827DAC4C8001620D1 /* Build configuration list for PBXProject "Dad Jokes" */ = {
+		BB60C26827DAC4C8001620D1 /* Build configuration list for PBXProject "Focuser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB60C27A27DAC4C8001620D1 /* Debug */,
