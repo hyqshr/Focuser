@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6314CBC32A72141100B9BBA2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6314CBC22A72141100B9BBA2 /* data.json */; };
+		6314CBC52A72267F00B9BBA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6314CBC42A72267F00B9BBA2 /* README.md */; };
 		63E4AE8F2A6CCFDC005B9B40 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE8E2A6CCFDC005B9B40 /* Task.swift */; };
 		63E4AE922A6DA0BA005B9B40 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */; };
-		BB391C0327DB282A00FAA98F /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */; };
-		BB60C27127DAC4C8001620D1 /* Dad_JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */; };
+		BB60C27127DAC4C8001620D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27027DAC4C8001620D1 /* AppDelegate.swift */; };
 		BB60C27327DAC4C8001620D1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB60C27227DAC4C8001620D1 /* MainView.swift */; };
 		BB60C27527DAC4C8001620D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB60C27427DAC4C8001620D1 /* Assets.xcassets */; };
 		BB60C27827DAC4C8001620D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB60C27727DAC4C8001620D1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6314CBC22A72141100B9BBA2 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		6314CBC42A72267F00B9BBA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		63E4AE8E2A6CCFDC005B9B40 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		BB391C0427DBBCE300FAA98F /* Focuser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Focuser-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BB60C26D27DAC4C8001620D1 /* Focuser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focuser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dad_JokesApp.swift; sourceTree = "<group>"; };
+		BB60C27027DAC4C8001620D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB60C27227DAC4C8001620D1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BB60C27427DAC4C8001620D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB60C27727DAC4C8001620D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		BB60C26427DAC4C8001620D1 = {
 			isa = PBXGroup;
 			children = (
+				6314CBC42A72267F00B9BBA2 /* README.md */,
 				BB60C26F27DAC4C8001620D1 /* Focuser */,
 				BB60C26E27DAC4C8001620D1 /* Products */,
 			);
@@ -62,9 +65,9 @@
 				BB391C0427DBBCE300FAA98F /* Focuser-Info.plist */,
 				63E4AE8E2A6CCFDC005B9B40 /* Task.swift */,
 				63E4AE912A6DA0BA005B9B40 /* NotificationManager.swift */,
-				BB60C27027DAC4C8001620D1 /* Dad_JokesApp.swift */,
+				6314CBC22A72141100B9BBA2 /* data.json */,
+				BB60C27027DAC4C8001620D1 /* AppDelegate.swift */,
 				BB60C27227DAC4C8001620D1 /* MainView.swift */,
-				BB391C0227DB282A00FAA98F /* ApplicationMenu.swift */,
 				BB60C27427DAC4C8001620D1 /* Assets.xcassets */,
 				BB60C27927DAC4C8001620D1 /* Dad_Jokes.entitlements */,
 				BB60C27627DAC4C8001620D1 /* Preview Content */,
@@ -139,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB60C27827DAC4C8001620D1 /* Preview Assets.xcassets in Resources */,
+				6314CBC32A72141100B9BBA2 /* data.json in Resources */,
+				6314CBC52A72267F00B9BBA2 /* README.md in Resources */,
 				BB60C27527DAC4C8001620D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,11 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB391C0327DB282A00FAA98F /* ApplicationMenu.swift in Sources */,
 				BB60C27327DAC4C8001620D1 /* MainView.swift in Sources */,
 				63E4AE922A6DA0BA005B9B40 /* NotificationManager.swift in Sources */,
 				63E4AE8F2A6CCFDC005B9B40 /* Task.swift in Sources */,
-				BB60C27127DAC4C8001620D1 /* Dad_JokesApp.swift in Sources */,
+				BB60C27127DAC4C8001620D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

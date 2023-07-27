@@ -1,5 +1,17 @@
 import SwiftUI
 
+enum FocusMode: String, CaseIterable {
+    case AfterFocusTime
+    case AfterTaskComplete
+}
+
+enum TimerStatus: String, CaseIterable{
+    case Configuring
+    case Focusing
+    case Breaking
+    case UserStop
+}
+
 struct MainView: View {
     @AppStorage("currentFocus") var currentFocus: String = ""
     @AppStorage("soundOn") var soundOn: Bool = false
@@ -8,10 +20,14 @@ struct MainView: View {
     @State private var todoItems: [Task] = []
     @State private var selectedMinutes: Int = 20
     @State private var selectedHours: Int = 0
+    @State private var selectedFocusMode = FocusMode.AfterTaskComplete
+    @State private var selectedFocusTime: Int = 20
+    @State var countdownTimer = 0
+    @State var timerStatus = TimerStatus.Configuring
+    @State var lastTimerStatus = TimerStatus.Breaking
+    @State var selectedBreakTime = 15
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var countdownTimer = 20
-    @State var breakTimer = 15
-    @State var timerRunning = false
     var maxTotalMinutes: Int {
         todoItems.map(\.time).max() ?? 1 // If the array is empty, default to 1 minute
     }
@@ -44,74 +60,123 @@ struct MainView: View {
             
             Divider()
             
-            List(todoItems) { item in
-                HStack() {
-                    Text(item.name)
-                    Text("\(item.time)")
-                        .foregroundColor(item.color)
-                    ProgressView(value: Double(item.time) / Double(maxTotalMinutes))
-                                .progressViewStyle(LinearProgressViewStyle())
-                                .onReceive(timer) { _ in
-                                    // Update the time property of the first task
-                                    if let index = todoItems.indices.first {
-                                        if countdownTimer > 0 && timerRunning {
-                                            todoItems[index].time -= 1
-                                        } else {
-                                            timerRunning = false
-                                        }
+            List{
+                ForEach(todoItems.indices, id: \.self) { index in
+                    let item = todoItems[index]
+                    
+                    HStack() {
+                        Text(item.name)
+                        Text("\(item.time)")
+                            .foregroundColor(item.color)
+                        ProgressView(value: Double(item.time) / Double(maxTotalMinutes))
+                            .progressViewStyle(LinearProgressViewStyle())
+                            .onReceive(timer) { _ in
+                                // Update the time property of the first task
+                                if let index = todoItems.indices.first {
+                                    if todoItems[index].time > 0 && timerStatus == TimerStatus.Focusing {
+                                        todoItems[index].time -= 1
+                                    } else if todoItems[index].time == 0 {
                                         
                                     }
-                                }
-                }
-            }
-            Divider()
-            HStack{
-                Text("Focus Time:")
-                Picker(selection: $countdownTimer, label: Text("Minutes")) {
-                                ForEach(0...60, id: \.self) { minute in
-                                    Text("\(minute) minutes")
+                                    
                                 }
                             }
-                            .labelsHidden()
-            }
-            HStack{
-                Text("Break Time: ")
-                Picker(selection: $breakTimer, label: Text("Minutes")) {
-                                ForEach(0...60, id: \.self) { minute in
-                                    Text("\(minute) minutes")
-                                }
-                            }
-                            .labelsHidden()
-            }
-            
-            
-            Text("\(countdownTimer) min")
-                .padding()
-                .onReceive(timer) { _ in
-                    if countdownTimer > 0 && timerRunning {
-                        countdownTimer -= 1
-                    } else if countdownTimer == 0 && timerRunning{
-                        NotificationManager().pushWorkTimeDone()
-                        timerRunning = false
-                    } else{
+                        Button("Finish"){
+                            deleteItem(at: index)
+                        }
                         
                     }
                     
                 }
-                .font(.system(size: 40, weight: .bold))
+            }
+            .frame(height: 130)
+            .border(Color.gray, width: 1)
+            Divider()
+            HStack{
+                Text("Set Break Time: ")
+                Picker(selection: $selectedBreakTime, label: Text("Minutes")) {
+                                ForEach(0...60, id: \.self) { minute in
+                                    Text("\(minute) minutes")
+                                }
+                            }
+                            .labelsHidden()
+            }
+            VStack(alignment: .leading, spacing: 10){
+                Text("How to break?")
+                Picker("", selection: $selectedFocusMode) {
+                                ForEach(FocusMode.allCases, id: \.self) { focusMode in
+                                    Text(focusMode == FocusMode.AfterFocusTime ? "After Focus Time" : "After Each Task Done")
+                                }
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+            }
+
+            if selectedFocusMode == FocusMode.AfterFocusTime{
+                HStack{
+                    Text("Focus Time:")
+                    Picker(selection: $selectedFocusTime, label: Text("Minutes")) {
+                                    ForEach(0...60, id: \.self) { minute in
+                                        Text("\(minute) minutes")
+                                    }
+                                }
+                                .labelsHidden()
+                }
+
+            }
+            
+            if timerStatus == TimerStatus.Focusing || timerStatus == TimerStatus.Breaking || timerStatus == TimerStatus.UserStop{
+                Text("\(countdownTimer) min")
+                    .onReceive(timer) { _ in
+                        if countdownTimer > 0 && (timerStatus == TimerStatus.Focusing || timerStatus == TimerStatus.Breaking) {
+                            countdownTimer -= 1
+                        } else if countdownTimer == 0{
+                            NotificationManager().pushWorkTimeDone()
+                            timerStatus =  timerStatus == TimerStatus.Focusing ? TimerStatus.Breaking :TimerStatus.Focusing
+                            countdownTimer = timerStatus == TimerStatus.Focusing ? selectedFocusTime : selectedBreakTime
+                            print("Switch mode to\(timerStatus) and reset timer")
+                        } else{
+                            
+                        }
+                        
+                    }
+                    .font(.system(size: 40, weight: .bold))
+                
+            } else{
+                Text("\(selectedFocusTime) min")
+                    .font(.system(size: 40, weight: .bold))
+            }
+
             
             HStack(spacing:30) {
-                Button("Start") {
-                    timerRunning = true
+                if timerStatus == TimerStatus.Configuring{
+                    Button("Start") {
+                        countdownTimer = selectedFocusTime
+                        timerStatus = TimerStatus.Focusing
+                    }
+                } else if timerStatus == TimerStatus.UserStop{
+                    Button("Resume") {
+                        timerStatus = lastTimerStatus
+                    }
                 }
-                Button("Stop") {
-                    timerRunning = false
+                if timerStatus != TimerStatus.UserStop && timerStatus != TimerStatus.Configuring{
+                    Button("Pause") {
+                        lastTimerStatus = timerStatus
+                        timerStatus = TimerStatus.UserStop
+                    }
+                }
+
+                    
+                Button("Reset") {
+                    lastTimerStatus = timerStatus
+                    timerStatus = TimerStatus.Configuring
                 }
             }
             
         }
         .padding()
+        .frame(width: 350, height: 500)
     }
+        
 
     func addItem() {
         if !newItemName.isEmpty {
@@ -124,11 +189,21 @@ struct MainView: View {
         }
     }
     
+    func deleteItem(at index: Int) {
+        if !todoItems.isEmpty {
+            todoItems.remove(at: index)
+        }
+    }
+    
+    func persistToJson(){
+        
+    }
+    
 }
+    
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        
         MainView()
         
     }
