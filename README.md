@@ -1,8 +1,3 @@
-
-<p align="center">
-  <img src="your_project_logo.png" alt="Your Project Name" width="200">
-</p>
-
 # 🌟 Focuser 🌟
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
