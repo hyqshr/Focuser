@@ -1,4 +1,33 @@
-# Focuser
-An macOS menubar only todo-list app that help user focus better, track spending time.
 
-![image](https://github.com/hyqshr/Focuser/assets/63976795/ceb7c349-907d-4974-91a4-fbd0ea01788b)
+<p align="center">
+  <img src="your_project_logo.png" alt="Your Project Name" width="200">
+</p>
+
+# 🌟 Focuser 🌟
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+
+## 📝 Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Focuser is a macOS menubar todo-list app that helps users focus, get more shits done.
+
+
+## Features
+
+- 🌈 Awesome feature 1: Different timer status between focus time and break time
+- 🦄 Magical feature 2: History tab shows how much time you spend on task by day
+
+  
+## Installation
+
+Step-by-step guide on how to install and set up your project. Feel free to use code blocks and clarify any dependencies or prerequisites.
